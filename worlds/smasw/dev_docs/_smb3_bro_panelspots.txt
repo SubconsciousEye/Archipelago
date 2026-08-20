@@ -1,0 +1,47 @@
+Hammer Bro Fight Spots:
+w1 = 9
+w2 = 4 (whistle), 17 (after fort), 8 (before fort)
+w3 = 15 (before 3-6, dock area included), 4 (after 3-6)
+w4 = 13 (mainland)
+w5 = 8 (mainland, +2 for 5-1 area), 9 (clouds)
+w6 = 18 (before 2nd fort)
+w7+ has no bros, still reserves 5 levels for the static "treasures"
+This would be 93 levels (!!!) if we assume no pre-w2-fort and no post-w3-6
+ (w/ them, it'd be 107 levels, would be ~122 if we included the rest of w6)
+We also lose some levels to World Bosses and Secret Chests
+Whistle Bro can reclaim some levels all to itself, since it is self-contained to its own area
+ A similar deal for the other W2 Bros, since the levels they would occupy are only for them
+Four extra levels still isn't enough, though
+We *could* probably shove the Muncher and Hand Level Checks into the "World Boss" Levels
+ This would free up five levels, and with the above trick, we'd have nine levels extra
+Levels with Secret Chests: 1-3 (Whistle), 3-7 (Jugem Cloud), 5-1 (Music Box)
+Excluding the W2 Pre-Fort levels and Whistle Bro, we have 95 "Levels"
+ We have 83 "Real" Levels, including the World Bosses, so 75 Real Levels
+ We can only have up to 126 Level IDs, ID 0 is "invalid" and we can't use IDs 0x80+
+We reserve 24 Level IDs for "Level Clear Panel Matches Rewards" (bitwised)
+126 - 24 => 102 - 8 => 94; we can probably +2 to this since the last "Real" Level is at 0x53
+You'll notice that this is ***VERY CLOSE***
+
+Mushroom Houses:
+w1 = 2
+w2 = 3
+w3 = 5
+w4 = 4
+w5 = 3
+w6 = 2
+w7 = 3
+w8 has no house
+There are 22 Mushroom Houses, excluding Special Houses
+
+Even-Worlds Hammer Bro Spots: 56, 60 w/ separate FluteBro
+Odd-Worlds Hammer Bro Spots: 47
+w1-4 Hammer Bro Spots: 66, 70 w/ separate FluteBro
+w5-6 Hammer Bro Spots: 37
+w1-3 Hammer Bro Spots: 53, 57 w/ separate FluteBro
+w4-6 Hammer Bro Spots: 50
+
+Conclusion:
+If we make the Hammer Bro Fights split their "Reward Bits" into Upper and Lower Nybbles,
+ we can probably save on a bunch of IDs to use.
+The Mushroom Houses will claim the Upper Nybble for its Checks, except for Special Houses
+ Special Houses just use the specified bit that it uses.
