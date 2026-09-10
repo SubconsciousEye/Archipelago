@@ -97,7 +97,7 @@ Currently, aside from everything previously described in the above sections, the
 - Is \[Feature\] Implemented?
     - If it isn't listed in the above sections, you can assume it's either not implemented, or has been considered and put into the `ROADMAP` Dev File.
 - Is there an External Tracker?
-    - A Poptracker Pack has not yet been made, feel free to make one yourself, though.
+    - A Poptracker Pack has not yet been made, feel free to make one yourself, though. Additonally, there is currently no Universal Tracker support, so it had been disabled for now.
 - What about the Non-SMW Versions of SMAS?
     - Other versions are considered, but not implemented. Refer to the `ROADMAP` for additional information.
 - Can I bring this to an Archipelago Session?

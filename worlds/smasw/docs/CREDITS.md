@@ -6,6 +6,7 @@
 - Notepad\+\+ (General Coding both SNES and Python)
 - YY\-CHR\.NET (General Purpose GFX Tool)
 - Various NES/SNES Mario Disassemblies (Purely Code Documentation Referencing, Comparison with Mesen Debugger)
+    - Intentionally Not Linked to prevent accidental distribution of any assets
 - Various APWorlds (Referencing and Understanding Archipelago\'s Infrastructure)
     - More information on the exact APWorlds referenced can be found within the Python Codes
 - Archipelago (Documentation, Infrastructure, Etc.)
