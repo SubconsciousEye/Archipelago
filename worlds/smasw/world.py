@@ -65,6 +65,9 @@ class SMASWWorld(World):
 
     # The WebWorld is a definition class that governs how this world will be displayed on the website.
     web = web_world.SMASWWebWorld()
+    
+    # Disable Universal Tracker (Not currently supported)
+    disable_ut = True
 
     settings: typing.ClassVar[SMASWSettings]
     settings_key = "smasw_options"
@@ -83,7 +86,8 @@ class SMASWWorld(World):
     # There is always one region that the generator starts from & assumes you can always go back to.
     # This defaults to "Menu", but you can change it by overriding origin_region_name.
     origin_region_name = "Game Select"
-    topology_present = True
+    ## Debug
+    #topology_present = True
 
     # Grabbed from Kirby Super Star
     def __init__(self, multiworld: MultiWorld, player: int):
@@ -107,12 +111,12 @@ class SMASWWorld(World):
     def set_rules(self) -> None:
         rules.set_all_rules(self)
         
-        # Debug
-        from Utils import visualize_regions
-        state = CollectionState(self.multiworld)
-        state.update_reachable_regions(self.player)
-        visualize_regions(self.get_region("Game Select"), "my_world.puml", show_entrance_names=True,
-                        regions_to_highlight=state.reachable_regions[self.player])
+        ## Debug
+        #from Utils import visualize_regions
+        #state = CollectionState(self.multiworld)
+        #state.update_reachable_regions(self.player)
+        #visualize_regions(self.get_region("Game Select"), "my_world.puml", show_entrance_names=True,
+        #                regions_to_highlight=state.reachable_regions[self.player])
 
     def create_items(self) -> None:
         items.create_all_items(self)
