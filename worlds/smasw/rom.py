@@ -22,7 +22,7 @@ if TYPE_CHECKING:
 # such as Spicy Mycena Waffles, Kirby Super Star, and Tetris Attack
 # CVCotM was also referenced here and there
 
-APWORLD_VERS: str = "00.00.01"
+APWORLD_VERS: str = "00.00.02"
 APWORLD_BETA: str = "AA"
 
 SMASUHASH = "" #SMAS SNES Cart Hash

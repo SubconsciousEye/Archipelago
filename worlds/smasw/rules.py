@@ -585,14 +585,24 @@ def set_all_location_rules(world: SMASWWorld) -> None:
     if world.options.available_smb2.value != 0:
         # Handle Character Select Locations, if applicable
         if world.options.char_select_checks_smb2.value != 0:
-            rule_loc_char_mario = world.get_location(location_name.loc_char_pick_mario_smb2)
-            world.set_rule(rule_loc_char_mario, Has(item_name.unlock_char_mario))
-            rule_loc_char_peach = world.get_location(location_name.loc_char_pick_peach_smb2)
-            world.set_rule(rule_loc_char_peach, Has(item_name.unlock_char_peach))
-            rule_loc_char_toad = world.get_location(location_name.loc_char_pick_toad_smb2)
-            world.set_rule(rule_loc_char_toad, Has(item_name.unlock_char_toad))
-            rule_loc_char_luigi = world.get_location(location_name.loc_char_pick_luigi_smb2)
-            world.set_rule(rule_loc_char_luigi, Has(item_name.unlock_char_luigi))
+            if world.options.char_select_checks_smb2.value == 1 or world.options.char_select_checks_smb2.value == 3:
+                rule_loc_char_view_mario = world.get_location(location_name.loc_char_view_mario_smb2)
+                world.set_rule(rule_loc_char_view_mario, Has(item_name.unlock_char_mario))
+                rule_loc_char_view_peach = world.get_location(location_name.loc_char_view_peach_smb2)
+                world.set_rule(rule_loc_char_view_peach, Has(item_name.unlock_char_peach))
+                rule_loc_char_view_toad = world.get_location(location_name.loc_char_view_toad_smb2)
+                world.set_rule(rule_loc_char_view_toad, Has(item_name.unlock_char_toad))
+                rule_loc_char_view_luigi = world.get_location(location_name.loc_char_view_luigi_smb2)
+                world.set_rule(rule_loc_char_view_luigi, Has(item_name.unlock_char_luigi))
+            if world.options.char_select_checks_smb2.value == 2 or world.options.char_select_checks_smb2.value == 3:
+                rule_loc_char_pick_mario = world.get_location(location_name.loc_char_pick_mario_smb2)
+                world.set_rule(rule_loc_char_pick_mario, Has(item_name.unlock_char_mario))
+                rule_loc_char_pick_peach = world.get_location(location_name.loc_char_pick_peach_smb2)
+                world.set_rule(rule_loc_char_pick_peach, Has(item_name.unlock_char_peach))
+                rule_loc_char_pick_toad = world.get_location(location_name.loc_char_pick_toad_smb2)
+                world.set_rule(rule_loc_char_pick_toad, Has(item_name.unlock_char_toad))
+                rule_loc_char_pick_luigi = world.get_location(location_name.loc_char_pick_luigi_smb2)
+                world.set_rule(rule_loc_char_pick_luigi, Has(item_name.unlock_char_luigi))
         # Handle Mushroom Checks
         # World 1
         rule_loc_w1_1_mush_1 = world.get_location(location_name.loc_world_1_1_smb2_mush_1)
