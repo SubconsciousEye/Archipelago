@@ -356,6 +356,13 @@ def set_all_entrance_rules(world: SMASWWorld) -> None:
             world.set_rule(ent_w2x2_smb1, Has(item_name.ability_swim_smb1))
             ent_w7x2_smb1 = world.get_entrance("World 7x1 Tile (SMB1) -> World 7x2 Tile (SMB1)")
             world.set_rule(ent_w7x2_smb1, Has(item_name.ability_swim_smb1))
+        # 4-3 has one jump that requires Dash in order to reach the height.
+        ent_w4_4_smb1 = world.get_entrance("World 4-3 Tile (SMB1) -> World 4-4 Tile (SMB1)")
+        world.set_rule(ent_w4_4_smb1, Has(item_name.ability_dash_smb1))
+        # Same as above, but for World X4
+        if world.options.hard_worlds_smb1.value != 0:
+            ent_w4x4_smb1 = world.get_entrance("World 4x3 Tile (SMB1) -> World 4x4 Tile (SMB1)")
+            world.set_rule(ent_w4x4_smb1, Has(item_name.ability_dash_smb1))
     if world.options.available_smbll.value != 0:
         # 3-2 and 6-2 both need Swim to complete
         ent_w3_2_smbll = world.get_entrance("World 3-1 Tile (SMBLL) -> World 3-2 Tile (SMBLL)")
